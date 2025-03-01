@@ -1,5 +1,5 @@
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+# import matplotlib.pyplot as plt
 # from sklearn.linear_model import LinearRegression
 # import time
 
@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 # x = [-1.2, 0.4, 4, 2.5, 2.4]
 # len(x)
 
-# import numpy as np
+
  
 #  # 2D vector
 # v = np.array([3, 4])
@@ -76,7 +76,7 @@ import matplotlib.pyplot as plt
 # x[3] = 20
 # print(y)
 
-# vector equality
+# # vector equality
 
 # x = np.array([2.4, 3.1, 3.6, -7.2])
 # y = x.copy()
@@ -93,7 +93,7 @@ import matplotlib.pyplot as plt
 # print(y == x)
 
 
-# Scalars versus 1-vectors.
+# #Scalars versus 1-vectors.
 
 # x = 2.4
 # y = [2.4]
@@ -104,7 +104,7 @@ import matplotlib.pyplot as plt
 # y = [2.4]
 # print(y[0] == 2.4)
 
-# block and stocked vectors
+# #block and stocked vectors
 
 # x = np.array([2, 1])
 # y = np.array([1, 2, 3])
@@ -122,7 +122,7 @@ import matplotlib.pyplot as plt
 # print (list_of_vectors[1] [0])
 
 
-# zero vector
+# #zero vector
 # print(np.zeros(3))
 
 # i = 2
@@ -138,12 +138,60 @@ import matplotlib.pyplot as plt
 
 # print(np.random.random(2))
 
-# Plotting
+# # Plotting
 
-plt.ion()
-temps = [ 71, 71, 68, 69, 68, 69, 68, 74, 77, 82, 85, 86, 88, 86,
-85, 86, 84, 79, 77, 75, 73, 71, 70, 70, 69, 69, 69, 69, 67,
-68, 68, 73, 76, 77, 82, 84, 84, 81, 80, 78, 79, 78, 73, 72,
-70, 70, 68, 67 ]
-plt.plot(temps, '-bo')
-plt.savefig('temperature.pdf', format = 'pdf')
+# plt.ion()
+# temps = [ 71, 71, 68, 69, 68, 69, 68, 74, 77, 82, 85, 86, 88, 86,
+# 85, 86, 84, 79, 77, 75, 73, 71, 70, 70, 69, 69, 69, 69, 67,
+# 68, 68, 73, 76, 77, 82, 84, 84, 81, 80, 78, 79, 78, 73, 72,
+# 70, 70, 68, 67 ]
+# plt.plot(temps, '-bo')
+# plt.savefig('temperature.pdf', format = 'pdf')
+
+# vector addition and subtraction
+import numpy as np # type: ignore
+# x = np.array([1, 2, 3])
+# y = np.array([100, 200, 300])
+# result_addition = x + y
+# result_subtraction = x - y
+# print("sum of vectors = ", result_addition)
+# print("Difference of vectors =", result_subtraction)
+
+# p_initial = np.array([22.15, 89.32, 56.77])
+# p_final = np.array([23.05, 87.32, 53.13])
+# r = (p_final - p_initial) / p_initial
+# print(r)
+
+
+# Linear functions
+
+# functions in python
+# f(x) = x1 + x2 - x3^(2) can be defined as follows
+
+# f = lambda x: x[0] + x[1] - x[3]**2
+# print(f([-1, 0, 1, 2]))
+
+
+
+# Angle
+
+# define angle function which defines radians
+
+ang = lambda x, y : np.arccos(x @ y / (np.linalg.norm(x)*(np.linalg.norm(y))))
+a = np.array([1, 2, -1])
+b = np.array([2, 0, -3])
+print(ang(a,b))
+
+# get angle in degrees
+
+print(ang(a,b) * (360/(2*np.pi)))
+
+
+
+
+ang = lambda x, y : np.arccos( x @ y / (np.linalg.norm(x) * (np.linalg.norm(y))))
+a = np.array([2, 1, -1])
+b = np.array([3, 2, -3])
+print(ang(a,b))
+
+print(ang(a,b) * (360 / (2*np.pi)))
